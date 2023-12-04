@@ -1,0 +1,84 @@
+﻿<Application x:Class="Calculator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Calculator"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <FontFamily x:Key="SanFranciscoFont">/Calculator;component/SFUIText-Bold.ttf#SF UI Text" /></FontFamily>
+        
+        <!--Commands Buttons Template-->
+        <Style x:Key="CommandButtons" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource SanFranciscoFont}"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="30"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="LightGray" CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>    
+            </Setter>
+            
+        </Style>
+
+        <!--Number Buttons Template-->
+        <Style x:Key="NumsButtons" TargetType="Button">
+
+            <Setter Property="FontFamily" Value="{StaticResource SanFranciscoFont}"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="White"/>
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#42413d" CornerRadius="30">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+        <!--Operator Buttons Template-->
+        <Style x:Key="OperatorButtons" TargetType="Button">
+
+            <Setter Property="FontFamily" Value="{StaticResource SanFranciscoFont}"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="White"/>
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="orange" CornerRadius="30">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        
+        <!--Screen Template-->
+        <Style x:Key="Screen" TargetType="TextBlock">
+
+            <Setter Property="FontFamily" Value="{StaticResource SanFranciscoFont}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="70"/>
+
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Margin" Value="0, 0, 10, 0"/>
+
+        </Style>
+
+    </Application.Resources>
+</Application>
